@@ -1,0 +1,48 @@
+/* Reset margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading style */
+h1 {
+  margin: 1rem;
+}
+
+/* Navbar styling */
+.navbar {
+  position: absolute; /* Places it relative to the top left */
+  top: 1rem;
+  left: 1rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Horizontal layout */
+  gap: 1rem;     /* Space between links */
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar li a:hover {
+  color: #555;
+}
+
+/* Optional: space for the main content */
+main, #projects {
+  margin: 5rem 2rem 2rem 2rem;
+}
+
+.overlayLogo {
+   position:absolute;
+   z-index: 99999;
+   top: 0;
+   left:0;
+}

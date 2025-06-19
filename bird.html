@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Yang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 98%;
+            background-color: #f8f8f8;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+           .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .menu-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 60px;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
+            padding-top: 20px;
+        }
+        
+        .nav.open {
+            right: 0;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+        
+         .nav a:hover {
+            background-color: #d02525;
+        }
+        
+        .content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+         <div class="header-title">Rebecca Yang</div>
+        <img src="menu-icon.png" alt="Menu" class="menu-icon" id="menuIcon">
+    </div>
+    
+    <nav class="nav" id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="Portfolio.html">portfolio</a>
+
+    </nav>
+
+<div style="text-align: center; margin: 20px; margin-top: 100px;">
+  <img id="patternImage" src="bird1.png" style="width:500px; height:700px;">
+  <br>
+
+  </button>
+  <h1>Hidden in plain Sight, wood, acrylic on clay, 8 x 10", </h1>
+    <p> This piece explores how the insutrail has taken over nature and have displaced many bird species. The bird is inside RISD's waterman building and slightly camouflauged into the background to show ow inegrated many native bird species are living among humans. 
+    </p>
+    </div>
+
+
+
+
+</a> 
+    
+    </div>
+
+   
+    <script>
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('open');
+        });
+        
+        // Close nav when clicking on a link
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

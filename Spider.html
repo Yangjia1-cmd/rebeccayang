@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Yang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 98%;
+            background-color: #f8f8f8;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+           .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .menu-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 60px;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
+            padding-top: 20px;
+        }
+        
+        .nav.open {
+            right: 0;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+        
+         .nav a:hover {
+            background-color: #d02525;
+        }
+        
+        .content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+         <div class="header-title">Rebecca Yang</div>
+        <img src="menu-icon.png" alt="Menu" class="menu-icon" id="menuIcon">
+    </div>
+    
+    <nav class="nav" id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="Portfolio.html">portfolio</a>
+    
+    </nav>
+
+<div style="text-align: center; margin-top: 90px;">
+  <video id="videoPlayer" width="800" controls muted>
+    <source id="videoSource" src="video.MOV" type="video/mp4">
+    
+  </video>
+  <br>
+  <button onclick="switchVideo()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
+    Next Video
+  </button>
+  <h1> Maternal Sacrifice, 2025, bioplastic, aluminum, wires, polyfill, light, hot glue, 28 x 27", Collaboration with Jeewoo Kim</h1>
+    <p> Inspired by the sacrifical nature of the Black Lace Weaver Spider, Maternal Sacrifice aims to provoke the Sacrifical Nature of Maternal Love. The mother transforms from an agent of life-giving and nurturing and into a substance for survival, disolving the boundary of self-identity and sacrifice for others.Through the interaction of the audience with the sculpture, one is able to view the gradual transformation of the mother, from life to death. The light that flickers throughout the duration of the inerative piece symbolizes the loss of life.
+    </p>
+</div>
+
+<script>
+  const videos = [
+    "video.MOV",
+    "video2.MOV"
+  ];
+
+  let currentVideo = 0;
+
+  function switchVideo() {
+    currentVideo = (currentVideo + 1) % videos.length;
+    const videoPlayer = document.getElementById("videoPlayer");
+    const videoSource = document.getElementById("videoSource");
+
+    videoSource.src = videos[currentVideo];
+    videoPlayer.load();
+    videoPlayer.play(); // optional
+  }
+</script>
+
+</a> 
+    
+    </div>
+
+   
+    <script>
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('open');
+        });
+        
+        // Close nav when clicking on a link
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

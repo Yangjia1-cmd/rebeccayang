@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Yang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 98%;
+            background-color: #f8f8f8;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+              display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+           .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .menu-icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 60px;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
+            padding-top: 20px;
+        }
+        
+        .nav.open {
+            right: 0;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            font-size: 18px;
+        }
+        
+         .nav a:hover {
+            background-color: #d02525;
+        }
+        
+        .content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="header">
+         <div class="header-title">Rebecca Yang</div>
+        <img src="menu-icon.png" alt="Menu" class="menu-icon" id="menuIcon">
+    </div>
+    
+    <nav class="nav" id="navMenu">
+        <a href="home.html">Home</a>
+        <a href="Portfolio.html">portfolio</a>
+    </nav>
+    
+    <div class="content" id="home">
+       <h1>Portfolio</h1>
+
+    <h2>Drawing</h2>
+   
+    <a href="dishwasher.html">
+    <img src="dishwasher.png" style="width:200px; height: 100 px;">
+ </a>  
+    <a href="healthyabundance.html">
+    <img src="helathy abundance.png" style="width:200px; height: 100 px;">
+    </a>  
+     <a href="cityscape.html">
+    <img src="cityscape.png" style="width:50px; height: 30 px;">
+ </a>  
+  <a href="digital.html">
+    <img src="home.png" style="width:200px; height: 100 px;">
+ </a>  
+ <a href="series.html">
+    <img src="series1.png" style="width:300px; height: 200 px;">
+ </a>  
+
+
+    <h2>Design</h2>
+     <a href="pattern.html">
+    <img src="pattern1.png" style="width:200px; height: 100 px;">
+     </a> 
+     <a href="museum.html">
+    <img src="design.png" style="width:150px; height: 80 px;">
+     </a>   
+     <a href="bird.html">
+    <img src="bird1.png" style="width:150px; height: 80 px;">
+     </a>  
+     <a href="bodies.html">
+    <img src="bodies.png" style="width:700px; height: 400 px;">
+ </a>   
+
+     <h3>Spatial Dynamics</h3>
+    <a href="fishtoy.html">
+    <img src="fish toy1.png" style="width:200px; height: 100 px;">
+
+  <a href="Spider.html" style="display: inline-block;">
+  <video width="280" height="180" style="display: block;" controls muted loop>
+    <source src="video2.MOV" type="video/mp4">
+  </video>
+</a>
+</div>
+
+   
+    <script>
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('open');
+        });
+        
+        // Close nav when clicking on a link
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
